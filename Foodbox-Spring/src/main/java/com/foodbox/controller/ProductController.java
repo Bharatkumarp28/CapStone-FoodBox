@@ -42,7 +42,7 @@ public class ProductController {
 		if(prodList.isEmpty()) {
 			List<Admin> adminList = adminRepository.findAll();
 			if(adminList.isEmpty()) {
-				adminRepository.save(new Admin("admin","admin"));
+				adminRepository.save(new Admin("admin","password"));
 			}
 			addProdIfEmpty(new Product(1,"Butter Chicken","Chicken infused with butter and spices","Indian",350,0,0,"yes","./assets/images/ButterChicken.png"));
 			addProdIfEmpty(new Product(2,"Chicken Biryani","Rice Steamed with Chicken and spices","Indian",365,10,0,"yes","./assets/images/biryani.jpg"));

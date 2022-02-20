@@ -1,30 +1,15 @@
 package com.foodbox.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "customer")
 public class Customer {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "email")
 	private String email;
-	
-	@Column(name = "password")
 	private String password;
-	
-	@Column(name = "name")
 	private String name;
-	
-	@Column(name = "contact")
 	private String contact;
-	
-	@Column(name = "address")
 	private String address;
 	
 	public Customer(String email, String password, String name, String contact, String address) {
